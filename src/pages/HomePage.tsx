@@ -81,7 +81,7 @@ export function HomePage() {
 
           <div className="hero-proof">
             <div><b>0</b><span>Cookies on this site</span></div>
-            <div><b>1,000+</b><span>Foods, sourced &amp; dated</span></div>
+            <div><b>900+</b><span>Foods, sourced &amp; dated</span></div>
             <div><b>100%</b><span>Exportable, always</span></div>
           </div>
         </div>
@@ -130,7 +130,7 @@ export function HomePage() {
         <Tile className="tile-half">
           <span className="tile-kicker"><Icon name="leaf" size={14} /> Nutrition</span>
           <h3>Macros that trace back to a source</h3>
-          <p>Log against 1,000+ Indian dishes and packaged foods. Every value carries the database it came from and the date it was last checked.</p>
+          <p>Log against 900+ Indian dishes and packaged foods. Every value carries the database it came from and the date it was last checked.</p>
           <div className="tile-art"><MacroViz /></div>
         </Tile>
 
