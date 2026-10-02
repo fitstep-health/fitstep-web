@@ -199,18 +199,18 @@ section > *, .hero-grid, .stats, .feature-grid, .step-row { max-width: var(--max
 
 /* ---------------- Logomark ---------------- */
 .mark { overflow: visible; }
-.mark-animate .mark-arc {
-  stroke-dasharray: 170;
-  stroke-dashoffset: 170;
-  animation: markDraw 1.6s 0.15s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+.mark-animate .mark-arms {
+  opacity: 0;
+  transform: translateY(6%);
+  animation: markRise 0.9s 0.15s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
 .mark-animate .mark-dot {
   transform-box: fill-box;
   transform-origin: center;
   transform: scale(0);
-  animation: markPop 0.55s 1.05s cubic-bezier(0.2, 1.3, 0.3, 1) forwards;
+  animation: markPop 0.55s 0.8s cubic-bezier(0.2, 1.3, 0.3, 1) forwards;
 }
-@keyframes markDraw { to { stroke-dashoffset: 0; } }
+@keyframes markRise { to { opacity: 1; transform: none; } }
 @keyframes markPop { to { transform: scale(1); } }
 
 /* ---------------- Hero ---------------- */
@@ -473,7 +473,7 @@ section > *, .hero-grid, .stats, .feature-grid, .step-row { max-width: var(--max
   * { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
   .reveal { opacity: 1; transform: none; }
   .anim-fade-1, .anim-fade-2, .anim-fade-3, .anim-fade-4, .anim-fade-5, .anim-pop { opacity: 1; }
-  .mark-animate .mark-arc { stroke-dashoffset: 0; }
+  .mark-animate .mark-arms { opacity: 1; transform: none; }
   .mark-animate .mark-dot { transform: scale(1); }
 }
 
