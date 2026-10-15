@@ -19,5 +19,10 @@ FROM nginx:alpine
 COPY --from=build /app/dist /usr/share/nginx/html
 RUN rm /etc/nginx/conf.d/default.conf
 COPY nginx/default.conf.template /etc/nginx/templates/default.conf.template
+# The CSP connect-src needs the API origin only; a source with a path
+# (".../api/v1") would match that exact URL and block every API call.
+ARG VITE_API_BASE_URL
+RUN origin=$(printf '%s' "$VITE_API_BASE_URL" | sed -E 's#^(https?://[^/]+).*#\1#') \
+ && sed -i "s#\${API_ORIGIN}#$origin#" /etc/nginx/templates/default.conf.template
 ENV PORT=8080
 EXPOSE 8080

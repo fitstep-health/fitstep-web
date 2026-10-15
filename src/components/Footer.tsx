@@ -36,12 +36,14 @@ export function Footer() {
 
         <nav className="footer-col" aria-label="Contact">
           <h4>Contact</h4>
+          <span>Developed by Naptrix Labs</span>
+          <span>Privacy and grievance contact</span>
           <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
         </nav>
       </div>
 
       <div className="footer-base">
-        <span>© {year} Prakash Eppala. All rights reserved.</span>
+        <span>© {year} Naptrix Labs. All rights reserved.</span>
         <span className="footer-made">Made with intention.</span>
       </div>
     </footer>

@@ -504,3 +504,5 @@ section > *, .hero-grid, .stats, .feature-grid, .step-row { max-width: var(--max
   box-shadow: 0 8px 24px rgba(36, 162, 154, 0.18);
 }
 .btn-secondary:hover { box-shadow: 0 12px 30px rgba(36, 162, 154, 0.28); transform: translateY(-2px); }
+.doc-contact { color: var(--text-3); margin-top: 32px; font-size: 14px; }
+.doc-contact a { color: var(--text-2); text-decoration: underline; text-underline-offset: 3px; }

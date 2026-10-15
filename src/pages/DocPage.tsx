@@ -69,6 +69,10 @@ export function DocPage({ slug, fallbackTitle }: Props) {
             <RichText text={parsed.body} />
           </Reveal>
         )}
+        <p className="muted doc-contact">
+          Vive is developed by Naptrix Labs. Privacy and grievance contact:{' '}
+          <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
+        </p>
       </div>
     </div>
   );
